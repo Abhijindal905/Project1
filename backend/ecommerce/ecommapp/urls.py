@@ -4,5 +4,6 @@ from django.urls import path,include
 
 
 urlpatterns = [
-    path('', getRoutes, name= "getRoutes")
+    path('', getRoutes, name= "getRoutes"),
+    path('products/', getProducts, name= "getProducts")
 ]
