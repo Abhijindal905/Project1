@@ -7,8 +7,6 @@ staticfiles/
 .venv/
 venv/
 env/
-db.sqlite3/
-
 # React
 node_modules/
 build/
@@ -16,3 +14,4 @@ build/
 # macOS & VS Code
 .DS_Store
 .vscode/
+backend/ecommerce/db.sqlite3
