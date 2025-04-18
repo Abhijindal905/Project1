@@ -1,25 +1,26 @@
-import {useEffect, useState} from 'react';
-import { fetchProducts } from '../api';
+import { useEffect, useState } from "react";
+import { fetchProducts } from "../api";
 
 const ProductList = () => {
-    const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    fetchProducts().then(setProducts);
+  }, []);
 
-    useEffect(() => {
-        fetchProducts().then(setProducts)
-    }, []);
+  console.log(products);
 
-    return (
-        <div className="grid">
-          {products.map((product) => (
-            <div key={product.id}>
-              <h3>{product.name}</h3>
-              <p>₹{product.price}</p>
-              <img src={`http://localhost:8000${product.image}`} alt={product.name} width="100" />
-            </div>
-          ))}
+  return (
+    <div className="grid">
+      {products.map((product) => (
+        <div key={product.id}>
+          <h3>{product.name}</h3>
+          <p>₹{product.price}</p>
+          <img src={product.image} alt={product.name} width="100" />
         </div>
-      );
+      ))}
+    </div>
+  );
 };
 
 export default ProductList;
