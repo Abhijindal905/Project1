@@ -1,0 +1,14 @@
+# Python & Django
+*.pyc
+__pycache__/
+media/
+staticfiles/
+.env
+.venv/
+venv/
+env/
+
+# macOS & VS Code
+.DS_Store
+.vscode/
+backend/ecommerce/db.sqlite3
