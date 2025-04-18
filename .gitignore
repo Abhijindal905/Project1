@@ -16,3 +16,6 @@ build/
 .DS_Store
 .vscode/
 backend/ecommerce/db.sqlite3
+backend/ecommerce/ecommerce/__pycache__/settings.cpython-313.pyc
+backend/ecommerce/ecommerce/__pycache__/urls.cpython-313.pyc
+backend/ecommerce/products/__pycache__/urls.cpython-313.pyc
