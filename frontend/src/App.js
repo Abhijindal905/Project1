@@ -1,8 +1,20 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import { Container } from 'react-bootstrap'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <h1>This is a new tag</h1>
+    <>
+    <div>
+      <Navbar />
+      <Container>
+        <h1>Welcome to eccommerce site</h1>
+      </Container>
+      <Footer />
+    </div>
+    
+    </>
   )
 }
 
