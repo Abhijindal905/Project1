@@ -7,7 +7,7 @@ staticfiles/
 .venv/
 venv/
 env/
-db.sqlite3
+db.sqlite3/
 
 # React
 node_modules/
