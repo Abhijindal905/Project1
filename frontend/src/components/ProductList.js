@@ -8,8 +8,6 @@ const ProductList = () => {
     fetchProducts().then(setProducts);
   }, []);
 
-  console.log(products);
-
   return (
     <div className="grid">
       {products.map((product) => (
