@@ -10,7 +10,7 @@ env/
 # React
 node_modules/
 build/
-*/migrations/
+**/migrations/
 
 # macOS & VS Code
 .DS_Store
