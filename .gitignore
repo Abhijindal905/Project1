@@ -1,0 +1,17 @@
+# Python & Django
+*.pyc
+__pycache__/
+media/
+staticfiles/
+.env
+.venv/
+venv/
+env/
+
+# React
+node_modules/
+build/
+
+# macOS & VS Code
+.DS_Store
+.vscode/
