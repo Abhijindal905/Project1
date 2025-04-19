@@ -6,6 +6,7 @@ import LoginScreen from './components/screens/LoginScreen';
 import SignupScreen from './components/screens/SignupScreen';
 import { Container } from 'react-bootstrap';
 import { Routes, Route } from 'react-router-dom';
+import CartScreen from './components/screens/CartScreen';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<HomeScreen />} />
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/signup" element={<SignupScreen />} />
+            <Route path="/cart" element={<CartScreen />} />
           </Routes>
         </Container>
       </main>

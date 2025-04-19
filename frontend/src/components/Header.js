@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";
 
@@ -52,20 +51,22 @@ function Header() {
                 </LinkContainer>
                 <div className="dropdown-menu">
                 <LinkContainer to="/login">
-                  <Nav.Link  className="dropdown-item" href="#">
+                  <Nav.Link  className="dropdown-item">
                     Login
                   </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/signup">
-                  <Nav.Link  className="dropdown-item" href="#">
+                  <Nav.Link  className="dropdown-item">
                     Signup
                   </Nav.Link>
                   </LinkContainer>
 
                   <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
+                  <LinkContainer to='Logout/'>
+                  <Nav.Link className="dropdown-item">
                     Logout
-                  </a>
+                  </Nav.Link>
+                  </LinkContainer>
                 </div>
               </li>
             </ul>
