@@ -7,6 +7,7 @@ import SignupScreen from './components/screens/SignupScreen';
 import { Container } from 'react-bootstrap';
 import { Routes, Route } from 'react-router-dom';
 import CartScreen from './components/screens/CartScreen';
+import ProductScreen from './components/screens/ProductScreen';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/signup" element={<SignupScreen />} />
             <Route path="/cart" element={<CartScreen />} />
+            <Route path="/product/:id" element={<ProductScreen/>}/>
           </Routes>
         </Container>
       </main>

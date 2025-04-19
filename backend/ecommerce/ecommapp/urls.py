@@ -5,5 +5,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('', getRoutes, name= "getRoutes"),
-    path('products/', getProducts, name= "getProducts")
+    path('products/', getProducts, name= "getProducts"),
+    path('product/<str:id>', getProduct, name="getProduct")
 ]

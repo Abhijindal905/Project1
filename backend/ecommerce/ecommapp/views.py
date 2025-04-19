@@ -14,3 +14,9 @@ def getProducts(request):
     products = Products.objects.all()
     serializer = ProductsSerializer(products, many = True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def getProduct(request, id):
+    product = Products.objects.get(_id=id)
+    serializer = ProductsSerializer(product, many=False)
+    return Response(serializer.data)
