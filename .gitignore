@@ -17,3 +17,5 @@ build/
 .vscode/
 backend/ecommerce/db.sqlite3
 backend/ecommerce/static/images/
+frontend/package-lock.json
+frontend/package.json
