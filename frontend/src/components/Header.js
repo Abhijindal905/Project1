@@ -67,6 +67,12 @@ function Header() {
                     Logout
                   </Nav.Link>
                   </LinkContainer>
+
+                  <LinkContainer to="/seller">
+                  <Nav.Link  className="dropdown-item" >
+                    Become a Seller
+                  </Nav.Link>
+                  </LinkContainer>
                 </div>
               </li>
             </ul>

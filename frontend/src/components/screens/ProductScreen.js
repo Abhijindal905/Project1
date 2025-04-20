@@ -13,6 +13,8 @@ import {
   Button,
 } from "react-bootstrap";
 import { listProductDetails } from "../../actions/productsActions";
+import Loader from "../Loader";
+import Message from "../Message";
 
 function ProductScreen({ params }) {
   const { id } = useParams();
@@ -31,9 +33,9 @@ function ProductScreen({ params }) {
         </Link>
 
         {loading ? (
-          <h1>loading.....</h1>
+          <Loader />
         ) : error ? (
-          { error }
+          <Message variant='danger'>{error}</Message>
         ) : (
           <Row>
             <Col md={6}>
