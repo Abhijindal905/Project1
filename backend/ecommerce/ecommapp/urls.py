@@ -10,5 +10,7 @@ urlpatterns = [
     path('', getRoutes, name= "getRoutes"),
     path('products/', getProducts, name= "getProducts"),
     path('product/<str:id>', getProduct, name="getProduct"),
-    path('users/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('users/login/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('users/profile/', getUserProfiles, name='getUserProfiles'),
+    path('users/', getUsers, name="getUsers")
 ]
