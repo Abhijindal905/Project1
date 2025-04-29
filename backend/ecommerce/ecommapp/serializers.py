@@ -37,7 +37,7 @@ class UserSerializers(serializers.ModelSerializer):
 
 
 
-class UserSerializerWithToken(serializers.ModelSerializer):
+class UserSerializerWithToken(UserSerializers):
     token = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = User
