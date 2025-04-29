@@ -12,5 +12,6 @@ urlpatterns = [
     path('product/<str:id>', getProduct, name="getProduct"),
     path('users/login/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('users/profile/', getUserProfiles, name='getUserProfiles'),
-    path('users/', getUsers, name="getUsers")
+    path('users/', getUsers, name="getUsers"),
+    path('users/register/', registerUser, name='register')
 ]
