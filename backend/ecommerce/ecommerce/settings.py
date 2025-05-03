@@ -191,3 +191,13 @@ MEDIA_ROOT = 'static/images'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGIN = True
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'abhijindal905@gmail.com'
+EMAIL_HOST_PASSWORD = 'plmzzaqvuuzxqzii'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
