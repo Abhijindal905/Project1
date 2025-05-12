@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -8,9 +8,11 @@ import {
   Card,
   InputGroup
 } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import {useDispatch, useSelector} from 'react-redux'
 import Message from "../Message";
 import { validPassword } from "./Regex";
+import { signup } from "../../actions/userActions"
 
 function SignupScreen() {
   const navigate = useNavigate();
@@ -20,23 +22,37 @@ function SignupScreen() {
   const [email, setEmail] = useState("");
   const [pass1, setPass1] = useState("");
   const [pass2, setPass2] = useState("");
-  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch()
+  const location = useLocation()
+  const redirect = location.search?location.search.split("=")(1) : "/"
+  const userSignup = useSelector((state) => state.userSignup)
+  const {error, loading, userInfo} = userSignup 
+
+  useEffect(() => {
+    if(userInfo){
+      navigate("/")
+    }
+
+  },[userInfo,redirect])
 
   const submitHandler = (e) => {
     e.preventDefault();
     if (pass1 !== pass2) {
-      setError("Passwords do not match");
+      setMessage("Passwords do not match");
       return;
     }
     if (!validPassword.test(pass1)) {
-      setError("Password criteria does not match");
+      setMessage("Password criteria does not match");
       return;
     }
 
-    setError("Sign Up Success");
-    navigate('/login'); 
-    // TODO: Add signup logic
+    else{
+      dispatch(signup(fname, lname, email, pass1))
+      setMessage("Signup is success")
+      navigate('/login')
+    }
   };
 
   return (

@@ -69,6 +69,7 @@ def getUsers(request):
 @api_view(['POST'])
 def registerUser(request):
     data = request.data
+    print(data)
     try:
         user = User.objects.create(first_name=data['fname'], last_name = data['lname'], 
         username = data['email'], email = data['email'], password = make_password(data['password']), 
@@ -91,7 +92,7 @@ def registerUser(request):
         serializer = UserSerializerWithToken(user, many=False) 
         return Response(serializer.data)
     except Exception as e:
-        message = {'details': str(e)}
+        message = {'detail': str(e)}
         return Response(message, status.HTTP_400_BAD_REQUEST)
 
 

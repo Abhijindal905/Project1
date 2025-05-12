@@ -82,7 +82,7 @@ function ProductScreen({ params }) {
                   <ListGroup.Item>
                     <Button
                       className="btn-block btn-success"
-                      disabled={product.stockcount == 0}
+                      disabled={product.stockcount === 0}
                       type="button"
                     >
                       Add to Cart
